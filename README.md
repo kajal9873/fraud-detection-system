@@ -98,7 +98,6 @@ pip install -r requirements.txt
 ### 4. Download dataset
 Download `creditcard.csv` from Kaggle and place it in `data/`:
 - **Kaggle:** https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
-- **Zenodo (no login):** https://zenodo.org/records/7395559
 
 ---
 
