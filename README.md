@@ -213,8 +213,3 @@ XGBoost is a black-box model. SHAP (SHapley Additive exPlanations) uses game the
 > Dataset: ULB Machine Learning Group — [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 
 ---
-
-## 👩‍💻 Author
-
-**Kajal** — B.Tech CSE-AI (Semester VI)  
-[GitHub](https://github.com/<your-username>) · [LinkedIn](https://linkedin.com/in/<your-profile>)
