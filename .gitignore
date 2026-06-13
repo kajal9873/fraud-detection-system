@@ -1,0 +1,65 @@
+# ─── Data (large files — download separately) ─────────────────────────────────
+data/creditcard.csv
+data/*.csv
+data/*.zip
+
+# ─── Models (regenerate via train.py) ─────────────────────────────────────────
+models/*.json
+models/*.bin
+
+# ─── Reports (regenerated on each run) ────────────────────────────────────────
+reports/*.png
+reports/*.jpg
+
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.so
+.installed.cfg
+
+# ─── Virtual environments ─────────────────────────────────────────────────────
+venv/
+env/
+ENV/
+.venv/
+.env
+*.env
+
+# ─── Jupyter ──────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ─── Keep folder structure ────────────────────────────────────────────────────
+!data/.gitkeep
+!models/.gitkeep
+!reports/.gitkeep
