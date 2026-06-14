@@ -108,16 +108,26 @@ st.markdown("""
 # ─── Load Model ────────────────────────────────────────────────────────────────
 @st.cache_resource
 def load_model():
-    # Auto-detect paths
-    if os.path.exists('/content/xgb_model.pkl'):
-        model_path = '/content/xgb_model.pkl'
-        scaler_path = '/content/scaler.pkl'
-    elif os.path.exists('/content/models/xgb_model.pkl'):
-        model_path = '/content/models/xgb_model.pkl'
-        scaler_path = '/content/models/scaler.pkl'
-    else:
-        model_path = '../models/xgb_model.pkl'
-        scaler_path = '../models/scaler.pkl'
+    # Auto-detect paths — works on Streamlit Cloud, Colab, and local
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    candidates = [
+        (os.path.join(base_dir, 'models', 'xgb_model.pkl'),
+         os.path.join(base_dir, 'models', 'scaler.pkl')),
+        ('../models/xgb_model.pkl', '../models/scaler.pkl'),
+        ('models/xgb_model.pkl',   'models/scaler.pkl'),
+        ('/content/models/xgb_model.pkl', '/content/models/scaler.pkl'),
+        ('/content/xgb_model.pkl', '/content/scaler.pkl'),
+    ]
+
+    model_path, scaler_path = None, None
+    for mp, sp in candidates:
+        if os.path.exists(mp) and os.path.exists(sp):
+            model_path, scaler_path = mp, sp
+            break
+
+    if model_path is None:
+        raise FileNotFoundError(f"Model not found. Searched in: {[c[0] for c in candidates]}")
 
     model = joblib.load(model_path)
     scaler = joblib.load(scaler_path)
