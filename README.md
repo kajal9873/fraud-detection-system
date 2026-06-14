@@ -8,6 +8,11 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110-green?logo=fastapi)](https://fastapi.tiangolo.com)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.32-red?logo=streamlit)](https://streamlit.io)
 
+# Live Demo: https://fraud-detection-system-jnrponhccfz5h8qgmgyz95.streamlit.app/
+
+<img width="1918" height="1085" alt="image" src="https://github.com/user-attachments/assets/08ff0be4-2677-41b1-9408-b6c8431e6293" />
+
+
 ---
 
 ## 📌 Problem Statement
